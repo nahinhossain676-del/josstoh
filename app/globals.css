@@ -1,12 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap');
-
 @layer base {
   * { box-sizing: border-box; }
+
   html { scroll-behavior: smooth; }
+
   body {
     background-color: #09090b;
     color: #fafafa;
@@ -16,19 +18,51 @@
 }
 
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(24px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-.fade-in { animation: fadeInUp 0.6s ease forwards; }
+
+.fade-in {
+  animation: fadeInUp 0.6s ease forwards;
+}
 
 @keyframes shimmer {
-  0%   { background-position: -200% center; }
-  100% { background-position: 200% center; }
+  0% {
+    background-position: -200% center;
+  }
+
+  100% {
+    background-position: 200% center;
+  }
 }
 
 @media print {
-  .no-print { display: none !important; }
-  body { background-color: #fff !important; color: #111 !important; }
-  nav, header, footer { display: none !important; }
-  #invoice-print { box-shadow: none !important; border: none !important; margin: 0 !important; padding: 1rem !important; }
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background-color: #fff !important;
+    color: #111 !important;
+  }
+
+  nav,
+  header,
+  footer {
+    display: none !important;
+  }
+
+  #invoice-print {
+    box-shadow: none !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 1rem !important;
+  }
 }
